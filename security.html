@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="js/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security • ColourSwift Cloud</title>
+  <meta name="description" content="ColourSwift Cloud security overview. UK-hosted infrastructure, Cloudflare protection, encryption in transit and at rest, optional end-to-end encryption, and two-factor authentication.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <a href="/" class="logo-link" aria-label="ColourSwift Cloud Home">
+      <img src="images/Whitelogo.svg" alt="ColourSwift Logo" class="logo">
+    </a>
+    <div class="menu-toggle">☰</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <!-- Security Content -->
+  <main class="policy" role="main" aria-labelledby="security-title">
+    <h1 id="security-title">Our Security Approach</h1>
+    <p>This page explains how we protect your data. It is written in plain language. If you have any questions, contact us and we will clarify further.</p>
+
+    <h2>1. Protected Infrastructure</h2>
+    <ul>
+      <li>UK colocation facility with 24/7 monitoring, controlled access, redundant power, and cooling.</li>
+      <li>Physical security controls for server racks. Only authorised engineers can access hardware.</li>
+      <li>Planned capacity growth and redundancy to maintain availability during maintenance or faults.</li>
+    </ul>
+
+    <h2>2. Network and Access Security</h2>
+    <ul>
+      <li>Cloudflare protection in front of public services. Real server IPs are not exposed directly.</li>
+      <li>A dedicated tunnel and reverse proxy layer separates the public internet from core services.</li>
+      <li>Host firewalls and fail2ban help prevent common brute force attacks and block suspicious traffic.</li>
+      <li>Only required ports are open. Management services are restricted and monitored.</li>
+    </ul>
+
+    <h2>3. Data Encryption</h2>
+    <ul>
+      <li>TLS enforced for all connections. Modern ciphers and HSTS applied.</li>
+      <li>Encrypted storage on the server. If hardware is stolen, data remains unreadable.</li>
+      <li>Optional end to end encryption in the client for supported folders and files.</li>
+      <li>Backups stored separately with encryption and regular restore testing.</li>
+    </ul>
+
+    <h2>4. Account Security</h2>
+    <ul>
+      <li>Two factor authentication available for all accounts. We encourage enabling it, and can enforce it for admin users.</li>
+      <li>Role based access. Users are placed in plan based groups with appropriate permissions and quotas.</li>
+      <li>Login attempts are monitored. Repeated failures are automatically limited.</li>
+    </ul>
+
+    <h2>5. Compliance and Privacy</h2>
+    <ul>
+      <li>UK hosted and GDPR aligned. Your data stays in the UK unless you request otherwise.</li>
+      <li>No advertising and no data mining. Your files remain yours.</li>
+      <li>Clear privacy policy and terms. We explain what we collect and why, in simple terms.</li>
+    </ul>
+
+    <h2>Our Promise</h2>
+    <p>No provider can claim perfect security. We follow a layered approach used by larger enterprises and continue to improve it. If you need a formal summary for your records, we can provide a short written statement of controls on request.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ColourSwift</p>
+    <nav class="footer-nav">
+      <a href="/Policies/Private-Policy">Privacy Policy</a> |
+      <a href="/Policies/Terms-Of-Use">Terms of Use</a>
+    </nav>
+  </footer>
+</body>
+</html>

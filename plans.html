@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="js/script.js" defer></script> <!-- loader + nav -->
+  <script src="js/plans.js" defer></script> <!-- slider logic -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plans - ColourSwift Cloud</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <style>
+    /* --- Pricing emphasis --- */
+    .reason h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .reason p {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #00bfff;
+      /* highlight cloud blue */
+    }
+
+    .reason ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .reason ul li {
+      margin: 0.4rem 0;
+    }
+
+    .popular {
+      background: #FF4500;
+      color: #fff;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-left: 0.5rem;
+    }
+
+    /* Custom plan in its own row */
+    .custom-plan {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .custom-plan h2 {
+      font-size: 1.6rem;
+    }
+
+    .custom-plan p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .custom-plan input[type=range] {
+      width: 80%;
+      margin: 1rem auto;
+    }
+
+    .custom-plan input[type=number] {
+      margin-top: 0.5rem;
+      padding: 0.4rem;
+      border-radius: 4px;
+      border: none;
+      background: #1a1a1a;
+      color: #e5e5e5;
+      width: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loader">
+    <img src="images/logo.svg" alt="ColourSwift Logo" class="loader-logo">
+  </div>
+
+  <!-- Header -->
+  <header>
+    <a href="/" class="logo-link">
+      <img src="images/Whitelogo.svg" alt="ColourSwift Logo" class="logo">
+    </a>
+    <div class="menu-toggle">☰</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <!-- Plans -->
+  <section class="why">
+    <h1>Our Cloud Plans</h1>
+    <p>Transparent pricing. No hidden fees. Privacy-first storage, fully under our control.</p>
+
+    <!-- Fixed Plans Row -->
+    <div class="reasons">
+      <!-- Basic -->
+      <div class="reason">
+        <h2>Basic</h2>
+        <p>100 GB • £3/mo</p>
+        <ul>
+          <li>Perfect for everyday documents</li>
+          <li>Private & secure storage</li>
+          <li>Email support included</li>
+        </ul>
+        <a href="/signup?plan=basic" class="plan-btn">Choose Basic</a>
+      </div>
+
+      <!-- Pro -->
+      <div class="reason">
+        <h2>Pro <span class="popular">Most Popular</span></h2>
+        <p>500 GB • £7/mo</p>
+        <ul>
+          <li>All Basic features</li>
+          <li>Great for photos & media</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="/signup?plan=pro" class="plan-btn">Choose Pro</a>
+      </div>
+
+      <!-- Ultimate -->
+      <div class="reason">
+        <h2>Ultimate</h2>
+        <p>1 TB • £12/mo</p>
+        <ul>
+          <li>All Pro features</li>
+          <li>Large-scale storage for power users</li>
+          <li>Business-ready performance</li>
+        </ul>
+        <a href="/signup?plan=ultimate" class="plan-btn">Choose Ultimate</a>
+      </div>
+    </div>
+
+    <!-- Custom Plan Row -->
+    <div class="custom-plan">
+      <h2>Custom</h2>
+      <p>Scale to your needs • up to 10 TB</p>
+      <input type="range" min="1000" max="10000" step="10" value="1000" id="storageSlider">
+      <p><span id="storageValue">1000</span> GB</p>
+      <input type="number" id="customStorage" min="1000" max="10000" step="10" value="1000"> GB
+      <p>£<span id="price">12.00</span>/mo</p>
+      <small>Custom plans start above Ultimate (1 TB). From £12/month up to ~£65/month for 10 TB.</small>
+
+      <!-- New continue button -->
+      <a id="customPlanLink" href="/signup?plan=custom&size=1000" class="plan-btn">
+        Continue with Custom Plan
+      </a>
+    </div>
+
+
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ColourSwift</p>
+    <a href="/Policies/Private-Policy">Privacy Policy</a> |
+    <a href="/Policies/Terms-Of-Use">Terms of Use</a>
+  </footer>
+
+</body>
+
+</html>

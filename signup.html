@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="js/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - ColourSwift Cloud</title>
+  <meta name="description" content="Create your ColourSwift Cloud account – secure, private, UK-hosted storage.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+
+<body class="signup-page">
+  <div id="loader">
+    <img src="images/logo.svg" alt="ColourSwift Logo" class="loader-logo">
+  </div>
+
+  <!-- Header -->
+  <header>
+    <a href="/" class="logo-link">
+      <img src="images/Whitelogo.svg" alt="ColourSwift Logo" class="logo">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/plans">View Plans</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  <!-- Signup Form -->
+  <section class="signup-section">
+    <div class="card signup-card">
+      <h2>Create Your Account</h2>
+      <p class="signup-sub">Secure your storage today – launching in 2026.</p>
+
+      <form id="signupForm">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm" name="confirm" required>
+
+        <label>Selected Plan</label>
+        <div id="planDisplay" class="plan-display"></div>
+        <input type="hidden" id="plan" name="plan">
+        <input type="hidden" id="size" name="size">
+
+        <button type="submit" class="btn alt">Sign Up</button>
+      </form>
+      <div class="message" id="message"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ColourSwift</p>
+    <nav class="footer-nav">
+      <a href="/Policies/Private-Policy">Privacy Policy</a> |
+      <a href="/Policies/Terms-Of-Use">Terms of Use</a>
+    </nav>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const plan = params.get("plan") || "basic";
+      const size = params.get("size");
+
+      // Show a friendly display
+      const planDisplay = document.getElementById("planDisplay");
+      planDisplay.textContent = size
+        ? `${plan.toUpperCase()} (${size} GB)`
+        : plan.toUpperCase();
+
+      // Store values in hidden fields
+      document.getElementById("plan").value = plan;
+      if (size) {
+        document.getElementById("size").value = size;
+      }
+    });
+
+    const form = document.getElementById("signupForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = form.email.value;
+      const password = form.password.value;
+      const confirm = form.confirm.value;
+      const plan = form.plan.value;
+      const size = form.size.value;
+
+      if (password !== confirm) {
+        message.textContent = "Passwords do not match.";
+        message.style.color = "red";
+        return;
+      }
+
+      // Build payload dynamically
+      const payload = { email, password, plan };
+      if (plan === "custom" && size) {
+        payload.size = size;
+      }
+
+      try {
+        const res = await fetch("/api/signup", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json();
+        if (res.ok) {
+          message.textContent = "Signup successful!";
+          message.style.color = "green";
+        } else {
+          message.textContent = `${data.error || "Signup failed."}`;
+          message.style.color = "red";
+        }
+      } catch (err) {
+        message.textContent = "Network error.";
+        message.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>
