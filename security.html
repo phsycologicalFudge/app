@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="js/script.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Security • ColourSwift Cloud</title>
   <meta name="description" content="ColourSwift Cloud security overview. UK-hosted infrastructure, Cloudflare protection, encryption in transit and at rest, optional end-to-end encryption, and two-factor authentication.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <a href="/" class="logo-link" aria-label="ColourSwift Cloud Home">
       <img src="images/Whitelogo.svg" alt="ColourSwift Logo" class="logo">
     </a>
-    <div class="menu-toggle">☰</div>
+    <div class="menu-toggle" aria-label="Open menu">☰</div>
     <nav>
       <a href="/">Home</a>
       <a href="/about">About</a>
@@ -47,14 +47,14 @@
     <ul>
       <li>TLS enforced for all connections. Modern ciphers and HSTS applied.</li>
       <li>Encrypted storage on the server. If hardware is stolen, data remains unreadable.</li>
-      <li>Optional end to end encryption in the client for supported folders and files.</li>
+      <li>Optional end-to-end encryption in the client for supported folders and files.</li>
       <li>Backups stored separately with encryption and regular restore testing.</li>
     </ul>
 
     <h2>4. Account Security</h2>
     <ul>
-      <li>Two factor authentication available for all accounts. We encourage enabling it, and can enforce it for admin users.</li>
-      <li>Role based access. Users are placed in plan based groups with appropriate permissions and quotas.</li>
+      <li>Two-factor authentication available for all accounts. We encourage enabling it, and can enforce it for admin users.</li>
+      <li>Role-based access. Users are placed in plan-based groups with appropriate permissions and quotas.</li>
       <li>Login attempts are monitored. Repeated failures are automatically limited.</li>
     </ul>
 
