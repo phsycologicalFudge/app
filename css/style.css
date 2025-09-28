@@ -844,4 +844,9 @@ header nav a:hover {
   font-weight: bold;
   font-size: 0.9rem;
 }
+main.policy h2 {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+}
 
