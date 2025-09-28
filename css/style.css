@@ -282,17 +282,20 @@ footer {
   }
 
   header {
-    height: 90px;              /* restore desktop height */
+    height: 90px;
+    /* restore desktop height */
     padding: 0 20px;
   }
 
   header .logo {
-    height: 150px;   /* bigger than 60px, smaller than 150px */
+    height: 150px;
+    /* bigger than 60px, smaller than 150px */
     width: auto;
   }
 
   header nav {
-    display: flex !important;  /* always visible nav */
+    display: flex !important;
+    /* always visible nav */
     position: static;
     flex-direction: row;
     background: transparent;
@@ -367,26 +370,32 @@ footer a:hover {
 }
 
 .logo-link:focus {
-  outline: none;              /* removes the focus outline */
+  outline: none;
+  /* removes the focus outline */
 }
 
 .logo-link img {
-  user-select: none;          /* stops text cursor blinking */
-  -webkit-user-drag: none;    /* stops drag ghost on Chrome/Safari */
+  user-select: none;
+  /* stops text cursor blinking */
+  -webkit-user-drag: none;
+  /* stops drag ghost on Chrome/Safari */
 }
 
 .logo-link:hover {
   text-decoration: none;
   outline: none;
-  box-shadow: none; /* in case of focus styles */
+  box-shadow: none;
+  /* in case of focus styles */
 }
+
 .custom-plan input[type=range] {
   appearance: none;
   -webkit-appearance: none;
   width: 80%;
   height: 8px;
   border-radius: 4px;
-  background: #222; /* fallback */
+  background: #222;
+  /* fallback */
   outline: none;
   margin: 1rem auto;
   cursor: pointer;
@@ -405,6 +414,7 @@ footer a:hover {
   margin-top: -5px;
   transition: 0.2s;
 }
+
 .custom-plan input[type=range]::-webkit-slider-thumb:hover {
   background: #00bfff;
   border-color: #FF4500;
@@ -419,10 +429,12 @@ footer a:hover {
   cursor: pointer;
   transition: 0.2s;
 }
+
 .custom-plan input[type=range]::-moz-range-thumb:hover {
   background: #00bfff;
   border-color: #FF4500;
 }
+
 /* --- Section Spacing --- */
 .trust-strip,
 .features,
@@ -455,12 +467,13 @@ footer a:hover {
   background: #1a1a1a;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.6);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
 }
 
 .card h3 {
@@ -468,6 +481,7 @@ footer a:hover {
   font-size: 1.3rem;
   color: #fff;
 }
+
 .card p {
   color: #bbb;
   font-size: 0.95rem;
@@ -478,7 +492,8 @@ footer a:hover {
   font-size: 1.6rem;
   font-weight: bold;
   margin: 0.75rem 0;
-  color: #00bfff; /* Cloud accent */
+  color: #00bfff;
+  /* Cloud accent */
 }
 
 /* --- How It Works --- */
@@ -489,17 +504,20 @@ footer a:hover {
   gap: 2rem;
   margin: 2rem 0;
 }
+
 .step {
   flex: 1 1 250px;
   background: #1a1a1a;
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 .step h3 {
   color: #fff;
   margin-bottom: 0.5rem;
 }
+
 .step p {
   color: #bbb;
 }
@@ -511,7 +529,7 @@ footer a:hover {
   margin: 2rem auto 0;
   display: block;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* --- CTA --- */
@@ -523,9 +541,11 @@ footer a:hover {
   margin: 3rem auto;
   max-width: 800px;
 }
+
 .cta h2 {
   margin-bottom: 1rem;
 }
+
 .screenshot-grid {
   display: flex;
   justify-content: center;
@@ -541,16 +561,17 @@ footer a:hover {
 /* Shared style */
 .screenshot-img {
   border-radius: 12px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
   display: block;
-  object-fit: cover;   /* crops empty black borders */
+  object-fit: cover;
+  /* crops empty black borders */
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 /* Hover pop-out */
 .screenshot-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 16px 36px rgba(0,0,0,0.8);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8);
   z-index: 3;
   position: relative;
 }
@@ -561,13 +582,15 @@ footer a:hover {
   .screenshot-grid {
     justify-content: center;
     align-items: flex-end;
-    gap: 2rem; /* reduce spacing so overlap looks natural */
+    gap: 2rem;
+    /* reduce spacing so overlap looks natural */
   }
 
   .desktop-shot {
     max-width: 850px;
     height: auto;
-    margin-right: -80px; /* pull mobile on top */
+    margin-right: -80px;
+    /* pull mobile on top */
   }
 
   .mobile-shot {
@@ -579,8 +602,10 @@ footer a:hover {
 
 /* Mobile mockup */
 .mobile-shot {
-  max-width: 300px;   /* realistic phone width */
-  height: 500px;      /* match desktop height */
+  max-width: 300px;
+  /* realistic phone width */
+  height: 500px;
+  /* match desktop height */
 }
 
 /* Labels */
@@ -610,7 +635,7 @@ footer a:hover {
   border-radius: 12px;
   margin: 4rem auto;
   max-width: 600px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 .waitlist h2 {
@@ -701,12 +726,14 @@ header nav a:hover {
     margin-left: 0 !important;
   }
 }
+
 /* ===========================
    Mobile Navigation Toggle Fix
    =========================== */
 @media (max-width: 768px) {
   header nav {
-    display: none; /* hide by default */
+    display: none;
+    /* hide by default */
     flex-direction: column;
     background: #0a0a0a;
     position: absolute;
@@ -717,7 +744,8 @@ header nav a:hover {
   }
 
   header nav.active {
-    display: flex; /* show when burger toggles it */
+    display: flex;
+    /* show when burger toggles it */
   }
 
   header nav a {
@@ -758,6 +786,7 @@ header nav a:hover {
   padding: 4px 10px;
   border-radius: 12px;
 }
+
 .plan-btn {
   display: inline-block;
   margin-top: 1rem;
@@ -773,15 +802,18 @@ header nav a:hover {
 .plan-btn:hover {
   background: #0099cc;
 }
+
 .plans-cta {
   text-align: center;
   margin-top: 2rem;
 }
+
 .signup-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh; /* centers it vertically */
+  min-height: 80vh;
+  /* centers it vertically */
   padding: 2rem;
   text-align: center;
 }
@@ -819,13 +851,15 @@ header nav a:hover {
   background: #111;
   color: #fff;
 }
+
 /* Section icons */
 .icon {
   height: 24px;
   width: 24px;
   margin-right: 8px;
   vertical-align: middle;
-  filter: invert(80%); /* makes SVG white-ish for dark mode */
+  filter: invert(80%);
+  /* makes SVG white-ish for dark mode */
 }
 
 /* Compliance badges */
@@ -833,6 +867,7 @@ header nav a:hover {
   margin: 2rem 0;
   text-align: center;
 }
+
 .badge {
   display: inline-block;
   background: #141414;
@@ -844,11 +879,13 @@ header nav a:hover {
   font-weight: bold;
   font-size: 0.9rem;
 }
+
 main.policy h2 {
   margin-top: 2.5rem;
   padding-top: 1rem;
   border-top: 1px solid #333;
 }
+
 /* ===========================
    Hamburger Button
    =========================== */
@@ -865,7 +902,8 @@ main.policy h2 {
   display: block;
   height: 3px;
   width: 100%;
-  background: #e5e5e5; /* white bars to match theme */
+  background: #e5e5e5;
+  /* white bars to match theme */
   border-radius: 2px;
 }
 
@@ -875,4 +913,3 @@ main.policy h2 {
     display: flex;
   }
 }
-
