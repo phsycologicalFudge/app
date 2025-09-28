@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Security • ColourSwift Cloud</title>
-  <meta name="description" content="ColourSwift Cloud security overview. UK-hosted infrastructure, Cloudflare protection, encryption in transit and at rest, optional end-to-end encryption, and two-factor authentication.">
+  <meta name="description" content="Learn how ColourSwift Cloud protects your data with enterprise-grade infrastructure, encryption, and account security.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <script src="js/script.js" defer></script>
@@ -23,50 +23,68 @@
     </nav>
   </header>
 
-  <!-- Security Content -->
+  <!-- Security Overview -->
   <main class="policy" role="main" aria-labelledby="security-title">
-    <h1 id="security-title">Our Security Approach</h1>
-    <p>This page explains how we protect your data. It is written in plain language. If you have any questions, contact us and we will clarify further.</p>
+    <h1 id="security-title">Security at ColourSwift Cloud</h1>
+    <p>We built ColourSwift Cloud with security as the foundation, not an afterthought. Below you’ll find a clear overview of how your data is protected across infrastructure, networks, storage, and accounts.</p>
 
-    <h2>1. Protected Infrastructure</h2>
-    <ul>
-      <li>UK colocation facility with 24/7 monitoring, controlled access, redundant power, and cooling.</li>
-      <li>Physical security controls for server racks. Only authorised engineers can access hardware.</li>
-      <li>Planned capacity growth and redundancy to maintain availability during maintenance or faults.</li>
-    </ul>
+    <!-- Section 1 -->
+    <section>
+      <h2>Infrastructure Protection</h2>
+      <ul>
+        <li>UK colocation facility with 24/7 monitoring, controlled access, redundant power, and cooling.</li>
+        <li>Physical rack security — only authorised engineers can access hardware.</li>
+        <li>Capacity planning ensures uptime during maintenance or hardware faults.</li>
+      </ul>
+    </section>
 
-    <h2>2. Network and Access Security</h2>
-    <ul>
-      <li>Cloudflare protection in front of public services. Real server IPs are not exposed directly.</li>
-      <li>A dedicated tunnel and reverse proxy layer separates the public internet from core services.</li>
-      <li>Host firewalls and fail2ban help prevent common brute force attacks and block suspicious traffic.</li>
-      <li>Only required ports are open. Management services are restricted and monitored.</li>
-    </ul>
+    <!-- Section 2 -->
+    <section>
+      <h2>Network & Access Controls</h2>
+      <ul>
+        <li>Cloudflare shields public endpoints — real server IPs stay hidden.</li>
+        <li>Dedicated tunnel and reverse proxy isolate core services from the internet.</li>
+        <li>Firewall rules and fail2ban mitigate brute force and suspicious traffic.</li>
+        <li>Minimal open ports; admin access is tightly restricted and logged.</li>
+      </ul>
+    </section>
 
-    <h2>3. Data Encryption</h2>
-    <ul>
-      <li>TLS enforced for all connections. Modern ciphers and HSTS applied.</li>
-      <li>Encrypted storage on the server. If hardware is stolen, data remains unreadable.</li>
-      <li>Optional end-to-end encryption in the client for supported folders and files.</li>
-      <li>Backups stored separately with encryption and regular restore testing.</li>
-    </ul>
+    <!-- Section 3 -->
+    <section>
+      <h2>Data Encryption</h2>
+      <ul>
+        <li>TLS (HTTPS) enforced everywhere with modern ciphers and HSTS.</li>
+        <li>All server storage is encrypted — stolen disks remain unreadable.</li>
+        <li>Optional end-to-end encryption available in supported clients.</li>
+        <li>Encrypted backups stored separately and tested regularly.</li>
+      </ul>
+    </section>
 
-    <h2>4. Account Security</h2>
-    <ul>
-      <li>Two-factor authentication available for all accounts. We encourage enabling it, and can enforce it for admin users.</li>
-      <li>Role-based access. Users are placed in plan-based groups with appropriate permissions and quotas.</li>
-      <li>Login attempts are monitored. Repeated failures are automatically limited.</li>
-    </ul>
+    <!-- Section 4 -->
+    <section>
+      <h2>Account Security</h2>
+      <ul>
+        <li>Two-factor authentication (2FA) available for all users; mandatory for admins.</li>
+        <li>Role-based access tied to your subscription plan and permissions.</li>
+        <li>Failed logins are monitored and automatically rate-limited.</li>
+      </ul>
+    </section>
 
-    <h2>5. Compliance and Privacy</h2>
-    <ul>
-      <li>UK hosted and GDPR aligned. Your data stays in the UK unless you request otherwise.</li>
-      <li>No advertising and no data mining. Your files remain yours.</li>
-      <li>Clear privacy policy and terms. We explain what we collect and why, in simple terms.</li>
-    </ul>
+    <!-- Section 5 -->
+    <section>
+      <h2>Privacy & Compliance</h2>
+      <ul>
+        <li>UK-hosted and GDPR-aligned. Data stays in the UK unless you request otherwise.</li>
+        <li>No advertising, no mining — your files are your files.</li>
+        <li>Clear policies explain what data we collect, why, and how it’s used.</li>
+      </ul>
+    </section>
 
-    <h2>Our Promise</h2>
-    <p>No provider can claim perfect security. We follow a layered approach used by larger enterprises and continue to improve it. If you need a formal summary for your records, we can provide a short written statement of controls on request.</p>
+    <!-- Promise -->
+    <section>
+      <h2>Our Promise</h2>
+      <p>No provider can claim perfect security. Instead, we apply a layered defence model used by larger enterprises and continually improve it. If you require a formal statement of controls for compliance, we can provide one on request.</p>
+    </section>
   </main>
 
   <!-- Footer -->
