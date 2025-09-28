@@ -819,4 +819,29 @@ header nav a:hover {
   background: #111;
   color: #fff;
 }
+/* Section icons */
+.icon {
+  height: 24px;
+  width: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+  filter: invert(80%); /* makes SVG white-ish for dark mode */
+}
+
+/* Compliance badges */
+.badges {
+  margin: 2rem 0;
+  text-align: center;
+}
+.badge {
+  display: inline-block;
+  background: #141414;
+  border: 1px solid #444;
+  color: #FF4500;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
 
